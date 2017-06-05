@@ -1,0 +1,5 @@
+#!/bin/bash
+#SBATCH --nodes=1 #<%= resources$nodes %>:ppn=<%= resources$cores %>
+#SBATCH --time=<%= resources$walltime %>
+#SBATCH --job-name=<%= job.name %>
+R CMD BATCH --no-save --no-restore "<%= rscript %>"
